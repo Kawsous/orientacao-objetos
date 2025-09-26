@@ -1,0 +1,6 @@
+/home/kpsousa/workspace/Pessoa/src/nivel2
+git rm -r --cached /home/kpsousa/workspace/Pessoa/src/nivel2
+git add .gitignore
+git commit -m "ALterações
+"
+git push
