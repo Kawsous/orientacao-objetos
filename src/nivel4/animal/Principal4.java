@@ -11,5 +11,8 @@ public class Principal4 {
 
         Animal vaca = new Vaca();
         vaca.emitirSom();
+
+        Animal pato = new Pato();
+        pato.emitirSom();
     }
 }
