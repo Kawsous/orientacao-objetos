@@ -1,8 +1,5 @@
-package nivel6.compras;
-
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
+package nivel6.comprasDesafio;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +8,7 @@ public class Main {
         System.out.println("Digite o valor do seu limte: ");
         double limite = sc.nextDouble();
 
+        //instanciando cartao
         CartaoCredito cartao1 = new CartaoCredito(limite);
 
         int escolha = 1;
@@ -24,6 +22,7 @@ public class Main {
 
             Compra compra1 = new Compra(preco, nome);
 
+            //atribuindo o metodo de validacao a uma variavel
             boolean compraRealizada = cartao1.lancaCompra(compra1);
 
             if (compraRealizada) {
@@ -40,6 +39,9 @@ public class Main {
 
         System.out.println("***********************");
         System.out.println("COMPRAS REALIZADAS");
+
+        //ordenando a lista em ordem decrescente
+        cartao1.getCompras().sort(Collections.reverseOrder());
 
         for (Compra c : cartao1.getCompras()) {
             System.out.println("\nNome: " + c.getNome() + "\nPreço: " + c.getPreco());

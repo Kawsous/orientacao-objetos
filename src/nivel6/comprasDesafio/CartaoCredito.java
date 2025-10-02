@@ -1,4 +1,4 @@
-package nivel6.compras;
+package nivel6.comprasDesafio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,19 +14,14 @@ public class CartaoCredito {
         this.compras = new ArrayList<>();
     }
 
+    //validacao de compra
     public boolean lancaCompra(Compra compra) {
         if (compra.getPreco() <= saldo ) {
             saldo -= compra.getPreco();
             compras.add(compra);
             return true;
-
         } else
-
             return false;
-    }
-
-    public double getLimite() {
-        return limite;
     }
 
     public double getSaldo() {
@@ -36,5 +31,4 @@ public class CartaoCredito {
     public List<Compra> getCompras() {
         return compras;
     }
-
 }

@@ -1,6 +1,6 @@
-package nivel6.compras;
+package nivel6.comprasDesafio;
 
-public class Compra {
+public class Compra implements Comparable<Compra>{
     private String nome;
     private double preco;
 
@@ -22,5 +22,11 @@ public class Compra {
         return "\nCompra: " +
                 "\nNome: " + nome +
                 "\nPreço: " + preco;
+    }
+
+    //modificando o 'contrato' da interface para comparar tipos Double
+    @Override
+    public int compareTo(Compra outraCompras) {
+        return Double.valueOf(this.preco).compareTo(outraCompras.preco);
     }
 }
